@@ -3,5 +3,19 @@
   "name": "app-1",
   "compatibility_date": "2025-06-30",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "src/worker.ts"
+  "main": "src/worker.ts",
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "Counter",
+        "name": "COUNTER"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["Counter"]
+    }
+  ]
 }

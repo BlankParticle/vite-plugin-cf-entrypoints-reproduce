@@ -11,8 +11,16 @@ export default class AppService extends WorkerEntrypoint<Env> {
     console.log(app1);
     const app1Response = await app1.text();
 
+    const id = this.env.COUNTER.idFromName("counter");
+    const counter = this.env.COUNTER.get(id);
+    // @ts-expect-error
+    const count = await counter.getCount();
+    // @ts-expect-error
+    await counter.increment();
+
     return Response.json({
       message: `Hello, from app-2!`,
+      count,
       app1Response,
     });
   }

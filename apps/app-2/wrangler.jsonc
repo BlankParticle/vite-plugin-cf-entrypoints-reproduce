@@ -10,5 +10,14 @@
       "service": "app-1",
       "entrypoint": "AdminService"
     }
-  ]
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "Counter",
+        "name": "COUNTER",
+        "script_name": "app-1"
+      }
+    ]
+  }
 }
