@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "app-1",
+  "compatibility_date": "2025-06-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/worker.ts"
+}

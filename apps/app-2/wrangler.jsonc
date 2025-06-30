@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "app-2",
+  "compatibility_date": "2025-06-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/worker.ts",
+  "services": [
+    {
+      "binding": "APP_1",
+      "service": "app-1",
+      "entrypoint": "AdminService"
+    }
+  ]
+}

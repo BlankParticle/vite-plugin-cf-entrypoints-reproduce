@@ -1,0 +1,9 @@
+{
+  "name": "entrypoints-reproduce",
+  "type": "module",
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "vite:dev": "pnpm -r --parallel vite:dev",
+    "wrangler:dev": "pnpm -r --parallel wrangler:dev"
+  }
+}
